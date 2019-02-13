@@ -16,5 +16,5 @@
     * [表达式解析](DataStructure/Stack&Queue/ExpressionParsing.md)
     * [队列](DataStructure/Stack&Queue/Queue.md)
   * [搜索](DataStructure/AlgorithmsLinearSearch/README.md)
-    * [线性搜索](DataStructureAlgorithmsLinearSearch/LinearSearch.md)
+    * [线性搜索](DataStructure/AlgorithmsLinearSearch/LinearSearch.md)
     * [二分搜索](DataStructure/AlgorithmsLinearSearch/AlgorithmsBinarySearch.md)
