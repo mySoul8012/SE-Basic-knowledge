@@ -1,0 +1,15 @@
+{
+    "title": "基础知识大全",
+    "author": "ming",
+    "description": "一本关于se基础知识的大全",
+    "language": "zh-hans",
+    "gitbook": "3.2.3",
+    "structure": {
+        "readme": "README.md"
+    },
+    "links": {
+        "sidebar": {
+            "我的狗窝": "https://www.iming.info"
+        }
+    }
+}
