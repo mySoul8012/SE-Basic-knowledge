@@ -11,4 +11,10 @@
   * [数据结构](DataStructure/AlgorithmBasicConcepts/README.md)
     * [数组](DataStructure/AlgorithmBasicConcepts/Arrays.md)
   * [链表](DataStructure/LinkedLists/README.md)
-
+    * [双向链表](DataStructure/LinkedLists/DoublyLinkedList.md)
+  * [堆栈](DataStructure/Stack&Queue/README.md)
+    * [表达式解析](DataStructure/Stack&Queue/ExpressionParsing.md)
+    * [队列](DataStructure/Stack&Queue/Queue.md)
+  * [搜索](DataStructure/AlgorithmsLinearSearch/README.md)
+    * [线性搜索](DataStructureAlgorithmsLinearSearch/LinearSearch.md)
+    * [二分搜索](DataStructure/AlgorithmsLinearSearch/AlgorithmsBinarySearch.md)
