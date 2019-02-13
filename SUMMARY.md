@@ -10,4 +10,5 @@
     * [动态规划](DataStructure/Algorithm/Dynamic.md)
   * [数据结构](DataStructure/AlgorithmBasicConcepts/README.md)
     * [数组](DataStructure/AlgorithmBasicConcepts/Arrays.md)
+  * [链表](DataStructure/LinkedLists/README.md)
 
