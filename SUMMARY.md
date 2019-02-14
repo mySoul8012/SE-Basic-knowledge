@@ -18,3 +18,7 @@
   * [搜索](DataStructure/AlgorithmsLinearSearch/README.md)
     * [线性搜索](DataStructure/AlgorithmsLinearSearch/LinearSearch.md)
     * [二分搜索](DataStructure/AlgorithmsLinearSearch/AlgorithmsBinarySearch.md)
+    * [插值搜索](DataStructure/AlgorithmsLinearSearch/InterpolationSearch.md)
+    * [哈希搜索](DataStructure/AlgorithmsLinearSearch/HashTable.md)
+  * [排序](DataStructure/SortingTechniques/README.md)
+    * [冒泡排序](DataStructure/SortingTechniques/BubbleSortAlgorithm.md)
