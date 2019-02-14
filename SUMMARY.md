@@ -24,3 +24,5 @@
     * [冒泡排序](DataStructure/SortingTechniques/BubbleSortAlgorithm.md)
     * [插入排序](DataStructure/SortingTechniques/AlgorithmsInsertionSort.md)
     * [选择排序](DataStructure/SortingTechniques/AlgorithmsSelectionSort.md)
+    * [合并排序](DataStructure/SortingTechniques/MergeSortAlgorithm.md)
+    * [希尔排序](DataStructure/SortingTechniques/ShellSort.md)
