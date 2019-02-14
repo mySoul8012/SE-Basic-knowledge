@@ -22,3 +22,5 @@
     * [哈希搜索](DataStructure/AlgorithmsLinearSearch/HashTable.md)
   * [排序](DataStructure/SortingTechniques/README.md)
     * [冒泡排序](DataStructure/SortingTechniques/BubbleSortAlgorithm.md)
+    * [插入排序](DataStructure/SortingTechniques/AlgorithmsInsertionSort.md)
+    * [选择排序](DataStructure/SortingTechniques/AlgorithmsSelectionSort.md)
