@@ -26,5 +26,6 @@
     * [选择排序](DataStructure/SortingTechniques/AlgorithmsSelectionSort.md)
     * [合并排序](DataStructure/SortingTechniques/MergeSortAlgorithm.md)
     * [希尔排序](DataStructure/SortingTechniques/ShellSort.md)
+    * [快速排序](DataStructure/SortingTechniques/QuickSort.md)
   * [图](DataStructure/GraphDataStructure/README.md)
     * [深度优先遍历](DataStructure/GraphDataStructure/DepthFirstTraversal.md)
