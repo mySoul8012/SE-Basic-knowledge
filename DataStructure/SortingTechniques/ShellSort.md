@@ -191,3 +191,38 @@ Output Array: [1 2 3 4 6 7 9 ]
 ```
 
 # 总结
+```
+import java.lang.reflect.Array;
+import java.nio.charset.MalformedInputException;
+import java.util.Arrays;
+
+public class main {
+    // 进行希尔排序
+    public static int[] sort(int[] arr){
+       int i, j ,gap;
+
+       // 获得步长
+        for(gap =  arr.length / 2; gap > 0; gap /= 2){
+            // 进行插入排序
+            for(i = 0; i < gap; i++){
+                for(j = i + gap; j < arr.length; j += gap){
+                    if (arr[j] < arr[j - gap]){
+                        int tmp = arr[j];
+                        int k = j - gap;
+                        while(k >= 0 && arr[k] > tmp){
+                            arr[k + gap] = arr[k];
+                            k -= gap;
+                        }
+                        arr[k + gap] = tmp;
+                    }
+                }
+            }
+        }
+
+        return new int[0];
+    }
+}
+
+```
+
+核心在于分而治之 + 插排，其中，分出两个数组，一个数组用于维护已经维护好的，有序的数组，，然后间隔每次每次减少一半。

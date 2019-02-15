@@ -209,3 +209,32 @@ Output Array: [1 2 3 4 6 7 9 ]
 # 总结
 一个for和一个while循环，for用于遍历已经排序好的数组，while用于遍历未排序的数组。进行交换。
 
+代码如下
+```
+
+// 插入排序
+public class insertSort {
+    public static void sort(int[] numbers){
+        // 其中insert为要插入的数据
+        int i, j , insert;
+        // 从数组的第二个元素开始循环数组中的元素插入
+        for(i = 1; i < numbers.length; i++){
+            // 用于保存被替换的值
+            insert = a[i];
+            // 用于保存已经排序好的列表
+            j = i - 1;
+            // 寻找剩余列表的数组，用于进行插入
+            while(j >= 0 && insert < a[j]){
+                // 把待插入的位置挪开
+                a[j + 1] = a[j];
+                j--;
+            }
+            // 进行插入
+            a[j + 1] = insert;
+        }
+    }
+}
+
+```
+
+核心在于维护两个，一个用于已经排序好的，一个用于没有排序好的。
