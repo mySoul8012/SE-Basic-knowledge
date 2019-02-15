@@ -29,3 +29,7 @@
     * [快速排序](DataStructure/SortingTechniques/QuickSort.md)
   * [图](DataStructure/GraphDataStructure/README.md)
     * [深度优先遍历](DataStructure/GraphDataStructure/DepthFirstTraversal.md)
+  * [树](DataStructure/Tree/README.md)
+    * [树遍历](DataStructure/Tree/TreeTraversal.md)
+    * [二叉搜索树](DataStructure/Tree/BinarySearchTree.md)
+    * [自平衡二叉搜索树](DataStructure/Tree/AVLTrees.md)

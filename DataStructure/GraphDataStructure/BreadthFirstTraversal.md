@@ -38,66 +38,74 @@ struct Vertex {
    bool visited;
 };
 
-//queue variables
+//队列变量
 
 int queue[MAX];
 int rear = -1;
 int front = 0;
 int queueItemCount = 0;
 
-//graph variables
+//图变量
 
-//array of vertices
+//顶点数组
 struct Vertex* lstVertices[MAX];
 
-//adjacency matrix
+//邻接矩阵
 int adjMatrix[MAX][MAX];
 
-//vertex count
+//顶点数
 int vertexCount = 0;
 
-//queue functions
-
+//队列功能
+// 插入
 void insert(int data) {
    queue[++rear] = data;
    queueItemCount++;
 }
 
+// 删除图
 int removeData() {
    queueItemCount--;
    return queue[front++]; 
 }
 
+// 判断图是否为空
 bool isQueueEmpty() {
    return queueItemCount == 0;
 }
 
-//graph functions
+//图函数
 
-//add vertex to the vertex list
+//顶点添加到顶点列表
 void addVertex(char label) {
+    // 申请内存空间
    struct Vertex* vertex = (struct Vertex*) malloc(sizeof(struct Vertex));
+   // 储存当前内容
    vertex->label = label;  
-   vertex->visited = false;     
+   // 下一个节点
+   vertex->visited = false;   
+   // 节点列表保存  
    lstVertices[vertexCount++] = vertex;
 }
 
-//add edge to edge array
+//添加边到边数组
 void addEdge(int start,int end) {
+    // 设置边1
    adjMatrix[start][end] = 1;
    adjMatrix[end][start] = 1;
 }
 
-//display the vertex
+//显示顶点
 void displayVertex(int vertexIndex) {
    printf("%c ",lstVertices[vertexIndex]->label);
 }       
 
-//get the adjacent unvisited vertex
+//获取相邻的未访问的节点
 int getAdjUnvisitedVertex(int vertexIndex) {
    int i;
 	
    for(i = 0; i<vertexCount; i++) {
+       // 寻找从当前节点到所有节点的边数
       if(adjMatrix[vertexIndex][i] == 1 && lstVertices[i]->visited == false)
          return i;
    }
@@ -105,24 +113,26 @@ int getAdjUnvisitedVertex(int vertexIndex) {
    return -1;
 }
 
+// 广度优先搜索
 void breadthFirstSearch() {
    int i;
 
-   //mark first node as visited
+   //第一个节点标记为已访问
    lstVertices[0]->visited = true;
 
-   //display the vertex
+   //显示顶点
    displayVertex(0);   
 
-   //insert vertex index in queue
+   //队列中插入顶点索引
    insert(0);
    int unvisitedVertex;
 
+   // 当队列为非空的时候不断寻找
    while(!isQueueEmpty()) {
-      //get the unvisited vertex of vertex which is at front of the queue
+      //获取位于前面的顶点的未访问顶点
       int tempVertex = removeData();   
 
-      //no adjacent vertex found
+      //找不到相邻节点
       while((unvisitedVertex = getAdjUnvisitedVertex(tempVertex)) != -1) {    
          lstVertices[unvisitedVertex]->visited = true;
          displayVertex(unvisitedVertex);
@@ -131,7 +141,7 @@ void breadthFirstSearch() {
 		
    }   
 
-   //queue is empty, search is complete, reset the visited flag        
+   //当遇到为空的时候搜索结束
    for(i = 0;i<vertexCount;i++) {
       lstVertices[i]->visited = false;
    }    
