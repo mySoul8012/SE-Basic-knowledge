@@ -189,3 +189,57 @@ Output Array: [1 2 3 4 6 7 9 ]
 ```
 
 # 总结
+java代码如下
+```
+
+public class main {
+    public int[] sort(int[] sourceArray){
+        // 对arr进行拷贝
+        int[] arr = Arrays.copyOf(sourceArray, sourceArray.length);
+        return quickSort(arr, 0, arr.length - 1);
+    }
+    // 进行排序
+    private int[] quickSort(int[] arr, int left, int right){
+        if(left < right){
+            // 对整个数组进行排序,先选取基准数，比基准小的放在前面，比基准大的放在后面
+            // 在分完区以后，确保基准数位于中间位置
+            int partitionIndex = partition(arr, left, right);
+            // 左边排序
+            quickSort(arr, left, partitionIndex - 1);
+            // 右边再次进行排序
+            quickSort(arr, partitionIndex + 1, right);
+        }
+        return arr;
+    }
+    // 分区操作
+    private int partition(int[] arr, int left, int right){
+        // 设定基准值,其中初始化基准值为left的第一个值
+        // index的值为遍历的值
+        int pivot = left;
+        int index = pivot + 1;
+        // 从当前的初始值进行遍历操作
+        for(int i = index; i <= right; i++){
+            if(arr[i] < arr[pivot]){
+                swap(arr, i, index);
+                index++;
+            }
+        }
+        // 基准数移动到中间
+        swap(arr, pivot, index - 1);
+        return index - 1;
+    }
+    // 进行交换
+    private void swap(int[] arr, int i, int j){
+        int tmp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = tmp;
+    }
+}
+
+```
+
+总结，使用递归操作，对整个数组进行排序，需要先选取基准数，然后同理递归左边，递归右边排序。
+最重要的是基准数的选择，需要设定两个指针，一个基准值，一个用于移动的index的值。
+然后对于任何比基准值小的数，放入index指向的值，并把index进行加加
+最后把基准值交换到最后一个index的值。
+返回基准值所在的下标等待再次进行递归。
