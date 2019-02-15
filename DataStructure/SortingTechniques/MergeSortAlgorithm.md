@@ -161,3 +161,76 @@ List before sorting
 List after sorting
 0 10 14 19 26 27 31 33 35 42 44
 ```
+
+# 总结
+先递归，再合并
+代码如下
+```
+import java.nio.charset.MalformedInputException;
+
+public class main {
+    public static void MergeSort(int[] arr, int low, int hight){
+        // 其中low为左边，hight为右边，mid为中间值
+        // 递归实现归并排序
+        int mid = (low + hight) / 2;
+        if(low < hight){
+            // 递归再对左右两边进行排序
+            MergeSort(arr, low, mid);
+            MergeSort(arr, mid + 1, hight);
+            // 合并
+            merge(arr, low, mid, hight);
+        }
+    }
+    // 进行合并
+    private static void merge(int[] arr, int low, int mid, int high){
+        // tmp用于暂时保存结果
+        int [] temp = new int[high - low + 1];
+        // 左边指针
+        int i = low;
+        // 右边指针
+        int j = mid + 1;
+        // 合并数组后的指针
+        int k = 0;
+        // 记录从大到小放入temp数组
+        for(; i <= mid && j <= high; k++){
+            if(arr[i] < arr[j]){
+                // 进入临时数组
+                temp[k] = arr[i++];
+            }else{
+                temp[k] = arr[j++];
+            }
+        }
+        // 比较结束以后。剩余部分放入数组
+        while(i <= mid){
+            temp[k++] = arr[i++];
+        }
+        while(j <= high){
+            temp[k++] = arr[j++];
+        }
+        // temp数组写入待排数组
+        for(int L = 0; L < temp.length; L++ ){
+            arr[low + L] = temp[L];
+        }
+    }
+}
+
+```
+测试类如下
+
+```
+import static org.junit.jupiter.api.Assertions.*;
+
+class mainTest {
+
+    @org.junit.jupiter.api.Test
+    void mergeSort() {
+        int[] a = {566, 34,54};
+        main.MergeSort(a, 0, 2);
+        for(int e : a){
+            System.out.println(e);
+        }
+    }
+}
+```
+
+总结：先分再合，分使用递归分，合，对两个列表中的元素进行合，插入临时数组中，最后剩余的和入数组中，然后再写入待排数组中。
