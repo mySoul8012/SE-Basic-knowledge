@@ -34,3 +34,8 @@
     * [树遍历](DataStructure/Tree/TreeTraversal.md)
     * [二叉搜索树](DataStructure/Tree/BinarySearchTree.md)
     * [自平衡二叉搜索树](DataStructure/Tree/AVLTrees.md)
+    * [生成树](DataStructure/Tree/SpanningTree.md)
+    * [堆](DataStructure/Tree/HeapDataStructures.md)
+  * [递归](DataStructure/Recursion/README.md)
+    * [汉(河)诺塔问题](DataStructure/Recursion/AlgorithmsTowerofHanoi.md)
+    * [斐波那契系列](DataStructure/Recursion/Fibonacci.md)

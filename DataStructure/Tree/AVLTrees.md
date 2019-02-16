@@ -70,3 +70,6 @@ BalanceFactor = height(left-sutree) − height(right-sutree)
 ![](./images/left_rotation.jpg) | 通过使B成为子树的新根节点来执行左旋转。A成为其右子树B的左子树。
 ![](./images/balanced_avl_tree.jpg) | 树现在平衡了。
 
+# 相关资源
+https://juejin.im/post/5b6b897df265da0fab404318
+https://zhuanlan.zhihu.com/p/27700617
