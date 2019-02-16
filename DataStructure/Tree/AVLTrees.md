@@ -54,4 +54,19 @@ BalanceFactor = height(left-sutree) − height(right-sutree)
 图 | 描述
 ---|---
 ![](./images/right_subtree_of_left_subtree.jpg) |已将节点插入左子树的右子树中。这使得C成为不平衡节点。这些场景导致AVL树执行左右旋转。
-![]() 
+![](./images/subtree_left_rotation.jpg) | 我们首先在C的左子树上执行左旋转。这使得A成为B的左子树。
+![](./images/left_unbalanced_tree.jpg) | 节点C仍然是不平衡的，但是现在，这是因为左子树的左子树。
+![](./images/right_rotation.jpg) | 我们现在将右旋转树，使B成为此子树的新根节点。C现在成为其左子树的右子树。
+![](./images/balanced_avl_tree.jpg) | 树现在平衡了。
+
+# 左右双旋转
+第二种类型的双旋转是右 - 左旋转。它是右旋转然后左旋转的组合。
+
+图 | 描述
+---|----
+![](./images/left_subtree_of_right_subtree.jpg) | 已将节点插入右子树的左子树中。这使得A是一个平衡因子为2的不平衡节点。
+![](./images/subtree_right_rotation.jpg) | 首先，我们沿C节点执行正确的旋转，使C成为其自己的左子树B的右子树。现在，B成为A的正确子树。
+![](./images/right_unbalanced_tree.jpg) | 节点A仍然是不平衡的，因为其右子树的右子树需要左旋转。
+![](./images/left_rotation.jpg) | 通过使B成为子树的新根节点来执行左旋转。A成为其右子树B的左子树。
+![](./images/balanced_avl_tree.jpg) | 树现在平衡了。
+
