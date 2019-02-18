@@ -8,3 +8,7 @@
 
 # 站点地址
 know.iming.info
+
+# 微信公众号
+
+![](./qrcode_for_gh_9901b36b3b0e_258.jpg)
