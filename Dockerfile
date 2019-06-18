@@ -8,7 +8,7 @@ EXPOSE 4000
 RUN npm install gitbook -g;
 RUN npm install gitbook-cli -g;
 # 拉取文件
-COPY . .
+RUN git clone https://github.com/mySoul8012/SE-Basic-knowledge.git
 # 进入目录
 WORKDIR /SE-Basic-knowledge
 # 初始化镜像
